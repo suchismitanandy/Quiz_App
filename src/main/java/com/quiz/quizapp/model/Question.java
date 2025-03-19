@@ -1,18 +1,12 @@
 package com.quiz.quizapp.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-//@Data
+@Data
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class Question implements Serializable {
 
     @Id

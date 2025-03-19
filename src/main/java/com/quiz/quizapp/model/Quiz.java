@@ -1,8 +1,11 @@
 package com.quiz.quizapp.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 public class Quiz {
 

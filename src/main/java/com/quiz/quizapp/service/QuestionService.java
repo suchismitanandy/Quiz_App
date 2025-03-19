@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +48,10 @@ public class QuestionService {
      }
 
      public Question updateQuestion(Question question) {
-          questionDao.findById(question.getId()).orElseThrow(NullPointerException::new);
+
+
+          Question existingQuestion = questionDao.findById(question.getId()).get();
+
           return questionDao.save(question);
      }
 }
